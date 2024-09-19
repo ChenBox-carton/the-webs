@@ -1,0 +1,213 @@
+body{
+    padding: 0 80px;
+    margin: 0;
+    min-height: 100vh;
+    background-color: gray;
+    background-image:
+        radial-gradient(closest-side, rgba(60, 60, 60, 1), rgba(60, 60, 60, 0)),
+        radial-gradient(closest-side, rgba(70, 70, 70, 1), rgba(70, 70, 70, 0)),
+        radial-gradient(closest-side, rgba(80, 80, 80, 1), rgba(80, 80, 80, 0)),
+        radial-gradient(closest-side, rgba(100, 100, 100, 1), rgba(100, 100, 100, 0)),
+        radial-gradient(closest-side, rgba(130, 130, 130, 1), rgba(130, 130, 130, 0));
+    background-size: 
+        120vmax 120vmax,
+        110vax 110vmax,
+        100vax 100vmax,
+        80vmax 80vmax,
+        90vmax 90vmax;
+    background-position: 
+        -80vmax -80vmax,
+        -40vmax -40vmax,
+        10vmax 10vmax,
+        40vmax 40vmax,
+        60vmax 60vmax;
+    background-repeat: no-repeat;
+    animation: 10s movement linear infinite;
+}
+
+body::before{
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+@keyframes movement{
+    0%, 100%{
+        background-size: 
+            120vmax 120vmax,
+            110vmax 110vmax,
+            100vmax 100vmax,
+            80vmax 80vmax,
+            90vmax 90vmax;
+        background-position: 
+            -80vmax -80vmax,
+            -40vmax -40vmax,
+            10vmax 10vmax,
+            40vmax 40vmax,
+            60vmax 60vmax;
+    }
+    25%{
+        background-size: 
+            100vmax 100vmax,
+            90vmax 90vmax,
+            80vmax 80vmax,
+            60vmax 60vmax,
+            70vmax 70vmax;
+        background-position: 
+            -60vmax -90vmax,
+            -30vmax -50vmax,
+            0vmax -20vmax,
+            40vmax 50vmax,
+            50vmax 70vmax;
+    }
+    50%{
+        background-size: 
+            110vmax 110vmax,
+            100vmax 100vmax,
+            80vmax 80vmax,
+            70vmax 70vmax,
+            80vmax 80vmax;
+        background-position: 
+            -75vmax -85vmax,
+            -45vmax -60vmax,
+            5vmax 0vmax,
+            35vmax 45vmax,
+            50vmax 55vmax;
+    }
+    75%{
+        background-size: 
+            105vmax 105vmax,
+            95vmax 95vmax,
+            90vmax 90vmax,
+            75vmax 75vmax,
+            85vmax 85vmax;
+        background-position: 
+            -70vmax -75vmax,
+            -35vmax -20vmax,
+            25vmax 20vmax,
+            50vmax 35vmax,
+            65vmax 40vmax;
+    }
+}
+
+h1{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+hr{
+    border: 1px solid white;
+    border-radius: 1px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 45px;
+}
+
+nav a{
+    color: inherit;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav a:hover{
+    border-radius: 5px;
+    background-color: rgba(80, 80, 80, 1);
+}
+
+nav ul{
+    border-radius: 10px;
+    background-color: rgba(100, 100, 100, 1);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li{
+    color:white;
+    font-family: sans-serif;
+}
+
+.interest{
+    border-radius: 10px;
+    background-color: rgba(100, 100, 100, 1);
+    list-style: none;
+}
+
+.imgcenter{
+    text-align: center;
+}
+
+.buttom{
+    text-align: center;
+}
+
+.intlist{
+    text-align: center;
+    font-size: 20px;
+    margin: 40px;
+    font-family: sans-serif
+}
+
+img.otmt{
+    text-align: center;
+    border: 5px solid;
+    border-color: rgba(60, 60, 60, 1);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+img.lamian{
+    text-align: center;
+    border: 5px solid;
+    border-color: rgba(60, 60, 60, 1);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+iframe{
+    text-align: center;
+    border: 5px solid;
+    border-color: antiquewhite;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+article p{
+    color:white;
+    font-family: sans-serif;
+}
+
+figcaption{
+    color:white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+footer address{
+    color: white;
+    text-align: center;
+}
