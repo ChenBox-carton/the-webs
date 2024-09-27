@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors Game!!!</h1>
+    <script src="game.js"></script>
+    <div class="main">
+        <button onclick="playGame('Rock')">
+            <img src="images/Rock.jpg" alt="RocK" style="width: 100px; height: 100px;">
+        </button>
+        <button onclick="playGame('Paper')">
+            <img src="images/Paper.jpg" alt="Paper" style="width: 100px; height: 100px;">
+        </button>
+        <button onclick="playGame('Scissors')">
+            <img src="images/Scissor.jpg" alt="Scissor" style="width: 100px; height: 100px;">
+        </button>
+    </div>
+
+    <p id="init">You haven't pick yet</p>
+    <div id="result" class="result hidden">
+        <p class="inline-result">You picked </p>
+        <p id="you-pick" class="inline-result focus"></p>
+        <p class="inline-result">Computer picked </p>
+        <p id="computer-pick" class="inline-result focus"></p>
+        <p id="ending" class="focus"></p>
+    </div>
+
+    <div class="main">
+        <p id="win-count" class="inline-counter">Win count: 0</p>
+        <p id="lose-count" class="inline-counter">Lose count: 0</p>
+        <p id="tie-count" class="inline-counter">Tie count: 0</p>
+    </div>
+</body>
+</html>

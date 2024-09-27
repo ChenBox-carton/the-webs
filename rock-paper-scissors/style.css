@@ -1,0 +1,62 @@
+body {
+    background-color: gray;
+    font-family: sans-serif;
+}
+
+.main {
+    text-align: center;
+    margin: 30px;
+}
+
+h1, p {
+    color: white;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 0;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 初始陰影 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加過渡 */
+}
+
+button:hover {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 加強陰影 */
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: rgb(200, 200, 200);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 加強陰影 */
+    transform: scale(0.95) translateY(6px);
+}
+
+.inline-counter {
+    display: inline-block;
+    margin: 10px 30px;
+    padding: 10px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.result {
+    text-align: center;
+}
+
+.inline-result {
+    display: inline;
+}
+
+.focus  {
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
