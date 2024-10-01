@@ -2,18 +2,12 @@ let winCount = 0;
 let loseCount = 0;
 let tieCount = 0;
 
-function playGame(playerMove) {
-    const randomNumber = Math.random() * 3;
-    let computerMove = '';
+const moves = ['Rock', 'Paper', 'Scissors'];
 
-    // 根據隨機數產生電腦的選擇
-    if (randomNumber >= 0 && randomNumber < 1) {
-        computerMove = 'Rock';
-    } else if (randomNumber >= 1 && randomNumber < 2) {
-        computerMove = 'Paper';
-    } else {
-        computerMove = 'Scissors';
-    }
+function playGame(playerMove) {
+    
+     // 根據隨機數產生電腦的選擇
+    const computerMove = moves[Math.floor(Math.random() * 3)];
 
     let result = '';
 
@@ -33,7 +27,10 @@ function playGame(playerMove) {
         loseCount++;
     }
     
+    updateUI(playerMove, computerMove, result);
+}   
     // 顯示結果
+function updateUI(playerMove, computerMove, result) {
     document.getElementById("init").classList.add("hidden");
     document.getElementById("result").classList.remove("hidden")
 
