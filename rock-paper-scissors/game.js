@@ -26,7 +26,7 @@ function playGame(playerMove) {
         result = 'You Lose';
         loseCount++;
     }
-    
+
     updateUI(playerMove, computerMove, result);
 }   
     // 顯示結果
@@ -34,9 +34,9 @@ function updateUI(playerMove, computerMove, result) {
     document.getElementById("init").classList.add("hidden");
     document.getElementById("result").classList.remove("hidden")
 
-    document.getElementById("you-pick").textContent = (`${playerMove}.`);
-    document.getElementById("computer-pick").textContent = (`${computerMove}.`);
-    document.getElementById("ending").textContent = (`${result}.`)
+    document.getElementById("you-pick").textContent = `${playerMove}.`;
+    document.getElementById("computer-pick").textContent = `${computerMove}.`;
+    document.getElementById("ending").textContent = `${result}.`;
 
     document.getElementById("win-count").textContent =
     (`Win count: ${winCount}`);
