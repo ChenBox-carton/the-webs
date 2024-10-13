@@ -14,7 +14,7 @@ const winConditions = {
 
 function playGame(playerMove) {
 
-     // 隨機產生電腦的選擇
+    // 隨機產生電腦的選擇
     const computerMove = moves[Math.floor(Math.random() * 3)];
 
     let result = '';
@@ -32,7 +32,7 @@ function playGame(playerMove) {
     }
 
     updateUI(playerMove, computerMove, result);
-}   
+}
 
 function updateUI(playerMove, computerMove, result) {
 

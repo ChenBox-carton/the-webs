@@ -9,7 +9,8 @@ body {
     margin: 30px;
 }
 
-h1, p {
+h1,
+p {
     color: white;
     text-align: center;
 }
@@ -66,7 +67,7 @@ button:active {
     display: inline;
 }
 
-.focus  {
+.focus {
     color: black;
     font-weight: bold;
 }
@@ -76,11 +77,25 @@ button:active {
 }
 
 @keyframes bounce {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.2); }
-    50% { transform: scale(0.9); }
-    75% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .bounce {
