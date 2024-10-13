@@ -19,19 +19,19 @@ button {
     padding: 0;
     border: 5px solid black;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 初始陰影 */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加過渡 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: rgb(230, 230, 230);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 加強陰影 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
 
 button:active {
     background-color: rgb(200, 200, 200);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 加強陰影 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: scale(0.95) translateY(6px);
 }
 
@@ -67,7 +67,7 @@ button:active {
 }
 
 .focus  {
-    color: rgb(200, 200, 200);
+    color: black;
     font-weight: bold;
 }
 
@@ -75,3 +75,14 @@ button:active {
     display: none;
 }
 
+@keyframes bounce {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.bounce {
+    animation: bounce 0.5s ease;
+}
