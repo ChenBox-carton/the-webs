@@ -1,4 +1,5 @@
 body {
+    text-align: center;
     background-color: gray;
     font-family: sans-serif;
 }
@@ -44,9 +45,22 @@ button:active {
     background-color: white;
 }
 
-.result {
-    text-align: center;
+.init {
+    width: 450px;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: 3px solid black;
+    border-radius: 5px;
 }
+
+.result {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 15px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
 
 .inline-result {
     display: inline;
@@ -60,3 +74,4 @@ button:active {
 .hidden {
     display: none;
 }
+
