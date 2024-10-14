@@ -17,7 +17,7 @@ canvas {
 .score {
     display: flex;
     justify-content: space-between;
-    width: 420px;
+    width: 600px;
     font-size: 18px;
 }
 
