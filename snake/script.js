@@ -2,6 +2,7 @@ const canvas = document.getElementById('gameCanvas');
 const context = canvas.getContext('2d');
 const gameOverScreen = document.getElementById('game-over');
 const restartBtn = document.getElementById('restart-btn');
+const initScreen = document.getElementById('init');
 
 const GRID_SIZE = 20;
 const SNAKE_SIZE = GRID_SIZE;
@@ -38,7 +39,7 @@ function initializeGame() {
 
     // Set initial snake direction
     dx = 0;
-    dy = -GRID_SIZE;
+    dy = 0;
     blinkCounter = 0;
     score = 0;
     currentScoreElem.textContent = score;
@@ -49,6 +50,16 @@ initializeGame();
 
 // Handle keyboard inputs for snake movement
 document.addEventListener('keydown', function (event) {
+
+    // Avoid initialize put ArrowDown(will gameover)
+    if (snake.length > 1 && dx === 0 && dy === 0) {
+        if (event.key === 'ArrowDown') {
+            return;
+        }
+    }
+
+    initScreen.style.display = 'none';
+
     switch (event.key) {
         case 'ArrowUp':
             if (dy === 0) {
@@ -76,6 +87,7 @@ document.addEventListener('keydown', function (event) {
             break;
     }
 });
+
 
 // Generate a food position that doesn't collide with the snake
 function generateFoodPosition() {
@@ -117,6 +129,10 @@ function checkCollision() {
 // Main game update function
 function update() {
     if (gamePaused) return;
+
+    if (dx === 0 && dy === 0) {
+        return;
+    }
 
     // Calculate new snake head position
     const head = {
@@ -202,6 +218,7 @@ function gameWin() {
 
 // Restart game when restart button clicked
 restartBtn.addEventListener('click', function () {
+    initScreen.style.display = 'flex';
     gameOverScreen.style.display = 'none';
     gamePaused = false;
     initializeGame();

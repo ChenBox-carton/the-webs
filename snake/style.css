@@ -12,13 +12,36 @@ body {
 
 canvas {
     border: 2px solid #fff;
+    border-radius: 5px;
 }
 
 .score {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 420px;
     font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#init {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.hint {
+    color: rgba(255, 0, 0, 0.8)
 }
 
 #restart-btn {
@@ -36,6 +59,7 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 15px;
     padding: 20px;
     color: #fff;
     display: none;
@@ -43,4 +67,5 @@ canvas {
     justify-content: cneter;
     align-items: cneter;
     text-align: center;
+    border-radius: 10px;
 }
