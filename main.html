@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The webs</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(120deg, rgb(100, 100, 100), rgb(60, 60, 60), rgb(20, 20, 20));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-display: none;
+            font-display: swap;
+            height: inherit;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1rem solid #fff;
+            border-radius: 0.5rem;
+        }
+
+        .project {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 1s ease;
+        }       
+        
+        .project:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        a {
+            color: rgb(60, 60, 60);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Web Project</h1>
+    <div class="project-container">
+        <a class="project" href="./rock-paper-scissors/index.html">rock-paper-scissors</a>
+        <a class="project" href="./snake/index.html">snake</a>
+        <a class="project" href="./calculator/index.html">calculator</a>
+    </div>
+</body>
+</html>
