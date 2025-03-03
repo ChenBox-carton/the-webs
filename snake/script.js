@@ -26,7 +26,7 @@ function initializeGame() {
         },
         {
             x: Math.floor(canvas.width / 2 / GRID_SIZE) * GRID_SIZE,
-            y: Math.floor((canvas.height / 2 / GRID_SIZE) + 1) * GRID_SIZE,
+            y: Math.floor((canvas.height / 2 / GRID_SIZE)) * GRID_SIZE,
         }
     ];
 
@@ -50,13 +50,6 @@ initializeGame();
 
 // Handle keyboard inputs for snake movement
 document.addEventListener('keydown', function (event) {
-
-    // Avoid initialize put ArrowDown(will gameover)
-    if (snake.length > 1 && dx === 0 && dy === 0) {
-        if (event.key === 'ArrowDown') {
-            return;
-        }
-    }
 
     initScreen.style.display = 'none';
 

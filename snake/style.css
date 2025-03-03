@@ -10,17 +10,27 @@ body {
     font-family: sans-serif;
 }
 
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(#999, #fff);
+    background-clip: text;
+    color: transparent;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 1px;
+    margin: 0 12px;
+
+}
+
 canvas {
     border: 2px solid #fff;
     border-radius: 5px;
 }
 
-.score {
+.gameArea {
     display: flex;
-    justify-content: space-between;
-    width: 420px;
-    font-size: 18px;
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 #init {
