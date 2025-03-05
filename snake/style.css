@@ -33,6 +33,15 @@ canvas {
     align-items: center;
 }
 
+.input {
+    margin: 10px;
+}
+
+.button {
+    margin-top: 10px;
+    padding: 2px 20px;
+}
+
 #init {
     position: absolute;
     top: 50%;

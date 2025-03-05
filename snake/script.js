@@ -16,6 +16,16 @@ let highScore = localStorage.getItem('highScore') || 0;
 let currentScoreElem = document.getElementById('current-score');
 let highScoreElem = document.getElementById('high-score');
 
+// InitPage ChangeCanvasSize
+function changeCanvasSize() {
+    let width = document.getElementById("canvas-width").value;
+    let height = document.getElementById("canvas-height").value;
+    let canvas =  document.getElementById('gameCanvas');
+    canvas.width = width*20;
+    canvas.height = height*20;
+}
+
+
 // Initialize game state
 function initializeGame() {
     // Set the snake
@@ -50,9 +60,9 @@ initializeGame();
 
 // Handle keyboard inputs for snake movement
 document.addEventListener('keydown', function (event) {
-
-    initScreen.style.display = 'none';
-
+    if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+        initScreen.style.display = 'none';
+    }
     switch (event.key) {
         case 'ArrowUp':
             if (dy === 0) {
@@ -210,7 +220,7 @@ function gameWin() {
 }
 
 // Restart game when restart button clicked
-restartBtn.addEventListener('click', function () {
+restartBtn.addEventListener('click', function (event) {
     initScreen.style.display = 'flex';
     gameOverScreen.style.display = 'none';
     gamePaused = false;
